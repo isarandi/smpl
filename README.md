@@ -4,11 +4,11 @@ This is an implementation of the SMPL body model for NumPy, PyTorch and TensorFl
 It is similar to https://github.com/CalciferZh/SMPL, with two main differences:
 
 - we use batched arrays in all frameworks,
-- we provide a fast way to compute only the joint locations but not the vertex locations
+- we provide a fast way to compute only the joint locations but not the vertex locations.
 
 There are also minor rearrangements of the computations, with heavy use of Einstein summation for clarity and speed.
 
-Usage:
+## Usage
 
 ```python
 from smpl.smpl_numpy import SMPL
@@ -21,7 +21,7 @@ body_model = SMPL(model_dir='...', gender='neutral'):
 pose = np.random.rand((1, 72))
 
 # The shape is expressed in SMPL's 10-dimensional shape space
-pose = np.random.rand((1, 10))
+shape = np.random.rand((1, 10))
 
 result = body_model(pose, shape)
 result['vertices']  # vertex locations, shape [1, 6890, 3]

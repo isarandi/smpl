@@ -35,3 +35,7 @@ result['orientations']  # global orientation of body parts as rotation matrices,
 ```
 
 To use TensorFlow or PyTorch, use `from smpl.smpl_tensorflow import SMPL` or `from smpl.smpl_pytorch import SMPL`.
+
+## Model files
+
+This code requires the SMPL model files which can be obtained from https://smpl.is.tue.mpg.de after agreeing to the SMPL license.
